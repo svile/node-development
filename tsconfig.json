@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "typings",
+    "paths": {
+      "-/*": ["src/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "lib": ["dom", "ES2019"],
+    "module": "commonjs",
+    "target": "ES2019",
+    "allowJs": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noEmitOnError": true,
+    "removeComments": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "strict": true
+  },
+  "include": ["src", "tests"]
+}

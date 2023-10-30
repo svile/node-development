@@ -1,0 +1,23 @@
+name: Release
+
+on:
+  push:
+    # Trigger on any tag
+    tags: [ '*' ]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@svile'
+          always-auth: 'true'
+      - uses: pnpm/action-setup@v2
+      - run: pnpm install
+      - run: pnpm version ${{ github.ref_name }} --no-git-tag-version
+      - run: pnpm publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
