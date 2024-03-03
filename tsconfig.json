@@ -1,17 +1,12 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "dist",
     "declaration": true,
     "declarationDir": "typings",
-    "paths": {
-      "-/*": ["src/*"]
-    },
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "module": "ESNext",
-    "moduleResolution": "NodeNext",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "target": "ESNext",
     "allowJs": true,
     "emitDecoratorMetadata": true,
@@ -31,5 +26,4 @@
     "sourceMap": true,
     "strict": true
   },
-  "include": ["src"]
 }
