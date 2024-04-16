@@ -9,8 +9,8 @@
   ],
   "packageManager": "pnpm@9.0.1",
   "engines": {
-    "npm": "9",
-    "node": "20"
+    "npm": ">=9.0.0",
+    "node": ">=20.0.0"
   },
   "scripts": {
     "setup": "pnpm run format && pnpm run lint",
